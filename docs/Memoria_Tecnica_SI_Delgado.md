@@ -39,6 +39,9 @@ Por consiguiente, la solución propuesta ofrece ventajas tanto técnicas como ec
 
 2\. **Estrategia de Despliegue y Comunicación**
 
+<img width="1085" height="455" alt="image" src="https://github.com/user-attachments/assets/92f89067-a103-44d0-80aa-58dead93068c" />
+
+
 La transferencia de la aplicación desde el entorno local hasta el servidor de producción se realizará mediante el protocolo **SFTP**, una alternativa segura al FTP tradicional. SFTP opera sobre el protocolo SSH, lo que garantiza un canal cifrado extremo a extremo y evita que credenciales o datos viajen en texto plano. Esta elección reduce significativamente la superficie de ataque y asegura que la integridad de los archivos se mantenga durante todo el proceso de despliegue. Además, permite el uso de autenticación mediante claves públicas, reforzando aún más la seguridad del sistema.
 
 El flujo de despliegue consiste en empaquetar los contenedores Docker del proyecto, transferirlos mediante SFTP al servidor y ejecutar el archivo docker-compose.yml para levantar la infraestructura híbrida. Este proceso es reproducible, automatizable y minimiza errores humanos, lo que facilita futuras actualizaciones o restauraciones del servicio.
